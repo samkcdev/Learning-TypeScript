@@ -1,11 +1,16 @@
 (function () {
     var button = document.querySelector(".button");
-    console.log(input);
     var input = document.querySelector(".form-control");
-    console.log(input);
+    var errmsg = document.querySelector(".errorMsg");
     var messegner = document.querySelector(".message");
-    button.addEventListener("click", function greetButton() {
-        console.log("sam");
-        messegner.innerHTML = "Hola! " + input.value;
-    });
+    button.addEventListener("click", greetButton("Hello", "No Name Entered"));
+    function greetButton(prefix, errorMsg) {
+        console.log(input.value);
+        messegner.innerHTML = prefix + input.value;
+        return function (e) {
+            if (input.value.length === 0) {
+                return (errmsg.innerHTML = errorMsg);
+            }
+        };
+    }
 })();
