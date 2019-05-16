@@ -25,7 +25,7 @@ var arr:Array<string> = ["Elephant","Mouse"];
 or
 var arr:string[] = ["Elephant","Mouse"];
 
-any type can be used when we dont know the type or while using objects
+'any' type can be used when we dont know the type or while using objects
 var animals:any = {name:"Elephants", food:"Omnivore"};
 
 TypeScript comes with defined types for the DOM
